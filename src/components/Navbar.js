@@ -122,8 +122,11 @@ const Navbar = () => {
               <Link to="/horarios" className="hover:bg-gray-700 px-3 py-2 rounded-md">
                 Horarios
               </Link>
-              <Link to="/promociones" className="hover:bg-gray-700 px-3 py-2 rounded-md">
+              {/* <Link to="/promociones" className="hover:bg-gray-700 px-3 py-2 rounded-md">
                 Promociones
+              </Link> */}
+              <Link to="/contenido" className="hover:bg-gray-700 px-3 py-2 rounded-md">
+                Contenido
               </Link>
             </div>
           </div>
