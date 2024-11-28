@@ -19,12 +19,12 @@ const DeliveryServicesManager = ({ services, onUpdate, onDelete }) => {
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-medium">Servicios de Delivery</h3>
+        <h3 className="text-lg font-medium">Delivery Services</h3>
         <button
           onClick={() => setIsAdding(true)}
           className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
         >
-          Agregar Servicio
+          Add service
         </button>
       </div>
 
@@ -51,7 +51,7 @@ const DeliveryServicesManager = ({ services, onUpdate, onDelete }) => {
               onChange={(e) => setNewService({ ...newService, isActive: e.target.checked })}
               className="mr-2"
             />
-            <label>Activo</label>
+            <label>Active</label>
           </div>
           <div className="flex justify-end space-x-2">
             <button
@@ -59,13 +59,13 @@ const DeliveryServicesManager = ({ services, onUpdate, onDelete }) => {
               onClick={() => setIsAdding(false)}
               className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600"
             >
-              Cancelar
+              Cancel
             </button>
             <button
               type="submit"
               className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
             >
-              Guardar
+              Save
             </button>
           </div>
         </form>
@@ -86,7 +86,7 @@ const DeliveryServicesManager = ({ services, onUpdate, onDelete }) => {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 text-sm"
                 >
-                  Ver enlace
+                  View link
                 </a>
               )}
               <span className={`px-2 py-1 rounded-full text-sm ${
@@ -101,7 +101,7 @@ const DeliveryServicesManager = ({ services, onUpdate, onDelete }) => {
               onClick={() => onDelete(service.id)}
               className="text-red-600 hover:text-red-800"
             >
-              Eliminar
+              Delete
             </button>
           </div>
         ))}

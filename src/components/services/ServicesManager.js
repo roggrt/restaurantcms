@@ -168,7 +168,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
             onClick={() => setIsAdding(true)}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Agregar Servicio
+            Add Service
           </button>
         </div>
 
@@ -178,7 +178,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
               {/* Imagen */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Imagen del Servicio 
+                  Image of service
                   <span className="text-sm text-gray-500 ml-2">
                     (Recomendado: 800x600px, Máx: 2MB)
                   </span>
@@ -208,7 +208,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
 
                 {(newService.imagePreview || newService.imageUrl) && (
                   <div className="mt-4 relative">
-                    <p className="text-sm text-gray-600 mb-2">Vista previa:</p>
+                    <p className="text-sm text-gray-600 mb-2">Preview:</p>
                     <div className="relative rounded-lg overflow-hidden bg-white shadow-md">
                       <img
                         src={newService.imagePreview || newService.imageUrl}
@@ -232,7 +232,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
               </div>
 
               <div>
-                <label className="block mb-1">Nombre del Servicio *</label>
+                <label className="block mb-1">Name of service *</label>
                 <input
                   type="text"
                   value={newService.name}
@@ -253,7 +253,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
               </div>
 
               <div>
-                <label className="block mb-1">Categoría</label>
+                <label className="block mb-1">Category</label>
                 <select
                   value={newService.category}
                   onChange={(e) => setNewService({...newService, category: e.target.value})}
@@ -269,7 +269,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
               </div>
 
               <div>
-                <label className="block mb-1">Precio</label>
+                <label className="block mb-1">Price</label>
                 <input
                   type="text"
                   value={newService.price}
@@ -280,7 +280,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
               </div>
 
               <div>
-                <label className="block mb-1">Características</label>
+                <label className="block mb-1">Detail</label>
                 <div className="space-y-2">
                   {newService.features.map((feature, index) => (
                     <div key={index} className="flex gap-2">
@@ -305,7 +305,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
                     onClick={handleFeatureAdd}
                     className="text-blue-500 hover:text-blue-700 text-sm"
                   >
-                    + Agregar característica
+                    + Add detail
                   </button>
                 </div>
               </div>
@@ -328,7 +328,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
                   onChange={(e) => setNewService({...newService, isActive: e.target.checked})}
                   className="mr-2"
                 />
-                <label>Activo</label>
+                <label>Active</label>
               </div>
 
               <div className="flex justify-end space-x-2">
@@ -337,7 +337,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
                   onClick={() => setIsAdding(false)}
                   className="px-4 py-2 text-gray-600 hover:text-gray-800"
                 >
-                  Cancelar
+                  Cancel
                 </button>
                 <button
                   onClick={handleAdd}
@@ -374,7 +374,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
                     onClick={() => onDelete(service.id)}
                     className="text-red-600 hover:text-red-800"
                   >
-                    Eliminar
+                    Delete
                   </button>
                 </div>
                 
@@ -389,7 +389,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
                       </span>
                     )}
                     <span className="text-xs text-gray-600">
-                      Orden: {service.order}
+                      Order: {service.order}
                     </span>
                   </div>
 
@@ -399,7 +399,7 @@ const ServicesManager = ({ services = [], onUpdate, onDelete }) => {
 
                   {service.features && service.features.length > 0 && (
                     <div className="mt-3">
-                      <p className="text-sm font-medium mb-1">Características:</p>
+                      <p className="text-sm font-medium mb-1">Details:</p>
                       <ul className="list-disc list-inside text-sm text-gray-600">
                         {service.features.map((feature, index) => (
                           <li key={index}>{feature}</li>

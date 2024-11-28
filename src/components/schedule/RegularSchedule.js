@@ -304,7 +304,7 @@ const RegularSchedule = ({ schedules = [], onUpdate, onDelete }) => {
     <div className="bg-white rounded-lg shadow mt-6">
       <div className="p-4">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold">Horarios Regulares</h2>
+          <h2 className="text-lg font-semibold">Regular Schedule</h2>
           <button
             onClick={() => setIsAdding(true)}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"

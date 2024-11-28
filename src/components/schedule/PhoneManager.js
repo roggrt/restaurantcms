@@ -19,12 +19,12 @@ const PhoneManager = ({ phones, onUpdate, onDelete }) => {
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-medium">Teléfonos</h3>
+        <h3 className="text-lg font-medium">Phone number</h3>
         <button
           onClick={() => setIsEditing(true)}
           className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
         >
-          Agregar Teléfono
+          Add phone
         </button>
       </div>
 
@@ -42,7 +42,7 @@ const PhoneManager = ({ phones, onUpdate, onDelete }) => {
             onChange={(e) => setEditingPhone({ ...editingPhone, type: e.target.value })}
             className="w-full p-2 border rounded"
           >
-            <option value="">Seleccionar tipo</option>
+            <option value="">Select type</option>
             <option value="main">Principal</option>
             <option value="whatsapp">WhatsApp</option>
             <option value="delivery">Delivery</option>
@@ -60,13 +60,13 @@ const PhoneManager = ({ phones, onUpdate, onDelete }) => {
               onClick={() => setIsEditing(false)}
               className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600"
             >
-              Cancelar
+              Delete
             </button>
             <button
               type="submit"
               className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
             >
-              Guardar
+              Save
             </button>
           </div>
         </form>

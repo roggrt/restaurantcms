@@ -20,7 +20,7 @@ const SocialMediaManager = ({ socialMedia, onUpdate }) => {
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-medium">Redes Sociales</h3>
+        <h3 className="text-lg font-medium">Social Media</h3>
         <button
           onClick={() => setIsEditing(true)}
           className="text-blue-600 hover:text-blue-800"
@@ -58,7 +58,7 @@ const SocialMediaManager = ({ socialMedia, onUpdate }) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Twitter</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">X</label>
             <input
               type="url"
               value={editingSocialMedia.twitter}
@@ -76,13 +76,13 @@ const SocialMediaManager = ({ socialMedia, onUpdate }) => {
               onClick={() => setIsEditing(false)}
               className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600"
             >
-              Cancelar
+              Cancel
             </button>
             <button
               type="submit"
               className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
             >
-              Guardar
+              Save
             </button>
           </div>
         </form>
@@ -110,7 +110,7 @@ const SocialMediaManager = ({ socialMedia, onUpdate }) => {
               )}
               {socialMedia[0].twitter && (
                 <p className="flex items-center">
-                  <span className="font-medium mr-2">Twitter:</span>
+                  <span className="font-medium mr-2">X:</span>
                   <a href={socialMedia[0].twitter} target="_blank" rel="noopener noreferrer"
                      className="text-blue-400 hover:text-blue-600">
                     {socialMedia[0].twitter}

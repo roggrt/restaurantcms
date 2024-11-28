@@ -1,122 +1,3 @@
-// // src/components/menu/DishModal.js
-// import React, { useRef } from 'react';
-
-// const DishModal = ({ 
-//   isOpen, 
-//   onClose, 
-//   dish, 
-//   setDish, 
-//   onSave, 
-//   categories,
-//   isEditing 
-// }) => {
-//   const fileInputRef = useRef();
-
-//   if (!isOpen) return null;
-
-//   const handleImageChange = (e) => {
-//     const file = e.target.files[0];
-//     if (file) {
-//       setDish({
-//         ...dish,
-//         imageFile: file,
-//         imagePreview: URL.createObjectURL(file)
-//       });
-//     }
-//   };
-
-//   return (
-//     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-//       <div className="bg-white rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-//         <h2 className="text-xl font-bold mb-4">
-//           {isEditing ? 'Editar Plato' : 'Nuevo Plato'}
-//         </h2>
-        
-//         <select
-//           className="w-full p-2 mb-4 border rounded"
-//           value={dish.categoryId}
-//           onChange={(e) => setDish({ ...dish, categoryId: e.target.value })}
-//           required
-//         >
-//           <option value="">Seleccionar categoría</option>
-//           {categories.map(category => (
-//             <option key={category.id} value={category.id}>
-//               {category.name}
-//             </option>
-//           ))}
-//         </select>
-
-//         <input
-//           type="text"
-//           placeholder="Nombre del plato"
-//           className="w-full p-2 mb-4 border rounded"
-//           value={dish.name}
-//           onChange={(e) => setDish({ ...dish, name: e.target.value })}
-//         />
-
-//         <textarea
-//           placeholder="Descripción"
-//           className="w-full p-2 mb-4 border rounded h-24"
-//           value={dish.description}
-//           onChange={(e) => setDish({ ...dish, description: e.target.value })}
-//         />
-
-//         <input
-//           type="number"
-//           placeholder="Precio"
-//           className="w-full p-2 mb-4 border rounded"
-//           value={dish.price}
-//           onChange={(e) => setDish({ ...dish, price: e.target.value })}
-//           step="0.01"
-//         />
-
-//         <div className="mb-4">
-//           <input
-//             type="file"
-//             ref={fileInputRef}
-//             className="hidden"
-//             accept="image/*"
-//             onChange={handleImageChange}
-//           />
-//           <button
-//             type="button"
-//             onClick={() => fileInputRef.current.click()}
-//             className="w-full p-2 bg-gray-100 text-gray-700 rounded border border-dashed border-gray-300 hover:bg-gray-200"
-//           >
-//             {dish.imageFile || dish.imageUrl ? 'Cambiar imagen' : 'Seleccionar imagen'}
-//           </button>
-//           {(dish.imagePreview || dish.imageUrl) && (
-//             <div className="mt-2">
-//               <img
-//                 src={dish.imagePreview || dish.imageUrl}
-//                 alt="Preview"
-//                 className="w-full h-48 object-cover rounded"
-//               />
-//             </div>
-//           )}
-//         </div>
-
-//         <div className="flex justify-end space-x-2">
-//           <button
-//             onClick={onClose}
-//             className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-//           >
-//             Cancelar
-//           </button>
-//           <button
-//             onClick={onSave}
-//             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-//           >
-//             Guardar
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DishModal;
-
 
 // src/components/menu/DishModal.js
 import React, { useRef, useState } from 'react';
@@ -235,7 +116,7 @@ const DishModal = ({
           {/* Categoría */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Categoría
+              Category
             </label>
             <select
               className="w-full p-2 border rounded-md"
@@ -255,7 +136,7 @@ const DishModal = ({
           {/* Nombre */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Nombre del plato
+              Name of the product
             </label>
             <input
               type="text"
@@ -269,7 +150,7 @@ const DishModal = ({
           {/* Descripción */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Descripción
+              Description
             </label>
             <textarea
               className="w-full p-2 border rounded-md h-24"
@@ -282,7 +163,7 @@ const DishModal = ({
           {/* Precio */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Precio
+              Price
             </label>
             <input
               type="number"
@@ -298,7 +179,7 @@ const DishModal = ({
           {/* Imagen */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Imagen del plato
+              Image of the product
             </label>
             <input
               type="file"
@@ -353,14 +234,14 @@ const DishModal = ({
               className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
               disabled={isUploading}
             >
-              Cancelar
+              Cancel
             </button>
             <button
               type="submit"
               className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
               disabled={isUploading}
             >
-              {isUploading ? 'Procesando...' : 'Guardar'}
+              {isUploading ? 'Procesando...' : 'Save'}
             </button>
           </div>
         </form>

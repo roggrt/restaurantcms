@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-6 px-4">
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-sm">© 2024 Restaurant CMS. Todos los derechos reservados.</p>
+            <p className="text-sm">© 2024 Restaurant CMS. All rights reserved.</p>
           </div>
           <div>
             <p className="text-sm">Versión 1.0.0</p>
